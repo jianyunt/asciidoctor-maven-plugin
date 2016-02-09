@@ -8,10 +8,10 @@ jdk:
   - openjdk7
   - openjdk6
 install:
-  - mvn package -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - ./mvnw package -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
-  - mvn -Prun-its verify jacoco:report
+  - ./mvnw -Prun-its verify jacoco:report
 after_success:
   # 'coveralls:report' goal is responsible for updating coverall.io stats once travisCI build completes
   # Look for the article 'Coveralls.io configuration for maven projects' in the wiki (https://github.com/asciidoctor/asciidoctor/wiki) for more details
-  - mvn coveralls:report
+  - ./mvnw coveralls:report
