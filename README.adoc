@@ -377,6 +377,12 @@ Developer setup for hacking on this project isn't very difficult. The requiremen
 * Java
 * Maven 3
 
+[NOTE]
+====
+The project includes the Maven Wrapper (https://github.com/takari/maven-wrapper) set to use the latest version of Maven.
+If Maven 3 is not locally installed, just use `./mvnw` instead of `mvn` in any of the examples to automatically install it.
+====
+
 Everything else will be brought in by Maven. This is a typical Maven Java project, nothing special. You should be able to use IntelliJ, Eclipse, or Netbeans
 without any issue for hacking on the project.
 
